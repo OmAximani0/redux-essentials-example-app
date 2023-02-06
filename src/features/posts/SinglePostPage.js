@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { PostAuthor } from './PostAuthor'
-import { ReactionButton } from './ReactionButton'
+import { ReactionButtons } from './ReactionButtons'
 import { TimeAgo } from './TimeAgo'
 import { selectPostById } from './postsSlice'
 
@@ -27,7 +27,7 @@ export const SinglePostPage = ({ match }) => {
         <PostAuthor userId={post.user} />
         <TimeAgo timeStamp={post.date} />
         <p className="post-content">{post.content}</p>
-        <ReactionButton post={post} />
+        <ReactionButtons post={post} />
         <Link to={`/editPost/${post.id}`} className="button">
           Edit Post
         </Link>
