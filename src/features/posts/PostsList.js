@@ -26,6 +26,8 @@ const PostExcerpt = ({ post }) => {
   )
 }
 
+PostExcerpt = React.memo(PostExcerpt)
+
 export const PostsList = () => {
   const dispatch = useDispatch()
   const posts = useSelector(selectAllPosts)
