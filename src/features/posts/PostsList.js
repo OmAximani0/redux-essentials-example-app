@@ -8,7 +8,7 @@ import { ReactionButtons } from './ReactionButtons'
 import { TimeAgo } from './TimeAgo'
 import { selectAllPosts, fetchPosts } from './postsSlice'
 
-const PostExcerpt = ({ post }) => {
+let PostExcerpt = ({ post }) => {
   return (
     <article className="post-excerpt">
       <h3>{post.title}</h3>
