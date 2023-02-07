@@ -10,10 +10,7 @@ export const UserPage = ({ match }) => {
 
   const user = useSelector((state) => selectUserById(state, userId))
 
-  const postForUser = useSelector((state) => {
-    const allPosts = selectAllPosts(state)
-    return allPosts.filter((post) => post.user === userId)
-  })
+  const postForUser = useSelector((state) => selectUserById(state, userId))
 
   const postTitles = postForUser.map((post) => (
     <li key={post.id}>
